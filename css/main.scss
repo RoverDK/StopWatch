@@ -1,0 +1,103 @@
+$mainColor1: #2987BE;
+$mainColor2: #1059B8;
+
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+* {
+    font-family: 'Roboto', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_block {
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        
+        .time {
+                background-color: $mainColor1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                height: 150px;
+                font-size: 95px;
+        }
+
+        .title {
+            background-color: $mainColor2;
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 150px;
+
+    .button {
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 10px;
+        width: 180px;
+        transition: .3s ease-in-out;
+        color: $mainColor1;
+        background-color: rgba(128, 128, 128, 0.199);
+        &:hover {
+            background-color: $mainColor2;
+            color: white;
+            cursor: pointer;
+        }
+        &:disabled {
+            color: grey;
+            cursor: not-allowed;
+            background-color: #f8f8f8;
+        }
+    }
+}
+
+.loops {
+    .loop_list{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        align-items: center;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 30px;
+            margin: 6px auto;
+            border: 1px solid black;
+            border-radius: 10px;
+            &:hover{
+                color: white;
+                background-color: $mainColor1;  
+            }
+        }
+    }
+}
